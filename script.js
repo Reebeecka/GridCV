@@ -68,7 +68,7 @@ headerAboutText.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 let headerImg = document.createElement("img");
 headerImg.className="header-img";
-headerImg.src="img/me.png";
+headerImg.src="./img/me.png";
 
 
 
@@ -119,7 +119,7 @@ project1.className="project1";
     ProjectHeader1.innerText="Till månen";
     let ProjectImg1 = document.createElement("img");
     ProjectImg1.className="project-img";
-    ProjectImg1.src="img/project1.png";
+    ProjectImg1.src="./img/project1.png";
     let Overlay1 =document.createElement("div");
     Overlay1.className="overlay";
     let overlaytext1 = document.createElement("p");
