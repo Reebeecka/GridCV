@@ -35,6 +35,7 @@ main {
         #header-about {
             grid-area: 4 / 3 / 5 / 5;
             margin-left: 2rem;
+            align-self: flex-start;
         }
         #header-abouttext {
             grid-area: 5 / 2 / 7 / 6;
@@ -61,26 +62,26 @@ main {
     }
     .project1, .project2, .project3, .project4{
         display: grid;
-        grid-template-columns: 0.3fr 1fr 0.3fr;
+        grid-template-columns: 0.2fr 0.2fr 1fr 0.2fr 0.2fr;
         grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         place-items: center;
     }
     .project-header {
-        grid-area: 1/2/2/3;
+        grid-area: 1/2/2/5;
         width: 100%;
     }
     .project-img {
-        grid-area:2/2/3/3;
+        grid-area:2/3/3/4;
         width: 100%;
     }
     .project-text{
-        grid-area: 3/2/4/3;
+        grid-area: 3/2/4/5;
         background-color: #ecdfd6;
     }
     .project-link{
-        grid-area: 4/2/5/3;
+        grid-area: 4/2/5/5;
         background-color: #ecdfd6;
         justify-self: left;
         margin-bottom: 2rem;
@@ -160,7 +161,7 @@ main{
             color: #9f7545;
         }
         #header-abouttext{
-            font-size: 0.9rem;
+            font-size: 0.75rem;
         }
     }
     .skills{
@@ -230,6 +231,12 @@ main{
         box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
     }
     .project-text, .project-link{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+    .project-link{
+        color:#9f7545;
+        &:active{
+            color: #46331d;
+        }
     }
 }

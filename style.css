@@ -80,6 +80,8 @@ main header #header-about {
   -ms-grid-column-span: 2;
   grid-area: 4 / 3 / 5 / 5;
   margin-left: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 main header #header-abouttext {
@@ -142,8 +144,8 @@ main .project4 {
 main .project1, main .project2, main .project3, main .project4 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.3fr 1fr 0.3fr;
-      grid-template-columns: 0.3fr 1fr 0.3fr;
+  -ms-grid-columns: 0.2fr 0.2fr 1fr 0.2fr 0.2fr;
+      grid-template-columns: 0.2fr 0.2fr 1fr 0.2fr 0.2fr;
   -ms-grid-rows: 0.5fr 2fr 1fr 0.5fr;
       grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
   grid-column-gap: 0px;
@@ -155,17 +157,17 @@ main .project-header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1/2/2/3;
+  -ms-grid-column-span: 3;
+  grid-area: 1/2/2/5;
   width: 100%;
 }
 
 main .project-img {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   -ms-grid-column-span: 1;
-  grid-area: 2/2/3/3;
+  grid-area: 2/3/3/4;
   width: 100%;
 }
 
@@ -173,8 +175,8 @@ main .project-text {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 3/2/4/3;
+  -ms-grid-column-span: 3;
+  grid-area: 3/2/4/5;
   background-color: #ecdfd6;
 }
 
@@ -182,8 +184,8 @@ main .project-link {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 4/2/5/3;
+  -ms-grid-column-span: 3;
+  grid-area: 4/2/5/5;
   background-color: #ecdfd6;
   -ms-grid-column-align: left;
       justify-self: left;
@@ -291,7 +293,7 @@ main header #header-about {
 }
 
 main header #header-abouttext {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 main .skills {
@@ -425,6 +427,14 @@ main .project-img {
 }
 
 main .project-text, main .project-link {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+}
+
+main .project-link {
+  color: #9f7545;
+}
+
+main .project-link:active {
+  color: #46331d;
 }
 /*# sourceMappingURL=style.css.map */
