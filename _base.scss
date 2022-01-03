@@ -1,145 +1,110 @@
-#content{
+//GRIDPlacement
+main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     grid-template-rows: 100vh 50vh 50vh 50vh;
-    .header{
-        grid-area: 1 / 1 / 2 / 3; 
+    header {
+        grid-area: 1 / 1 / 2 / 3;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        .header-name { 
-            grid-area: 2 / 1 / 5 / 5; 
-            place-self: center;
-            font-family: 'Euphoria Script', cursive;
+        align-items: center;
+        nav{
+            grid-area: 1 / 2 / 2 / 6;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            #header-lang{
+                grid-column: 1;
+            }
+            .header-contact{
+                grid-column: 6;
+            }
         }
-        .header-name-name { 
-            grid-area: 2 / 1 / 5 / 5; 
-            justify-self: center;
-            align-self: end;
-            text-transform: uppercase;
-            color:#9f7545;
+        .header-name {
+            grid-area: 3 / 3 / 4 / 7;
+            margin-left: 2rem;
         }
-        .header-contact { 
-            grid-area: 1 / 4 / 2 / 5; 
-            align-self: start; 
-            justify-self: end;
-            margin-right:1rem;
+        #header-name-name {
+            grid-area: 4 / 3 / 4 / 7;
+            margin-left: 2rem;
         }
-        .header-lang { 
-            grid-area: 1 / 1 / 2 / 2; 
-            place-self: start; 
-            margin-left:1rem;
+        #header-about {
+            grid-area: 5 / 3 / 6 / 5;
+            margin-left: 2rem;
         }
-        .header-about { 
-            grid-area: 5 / 2 / 6 / 4; 
-            align-self: end; 
-            justify-self: center;
+        #header-abouttext {
+            grid-area: 6 / 2 / 8 / 6;
         }
-        .header-abouttext { 
-            grid-area: 6 / 1 / 9 / 5; 
-            align-self: start; 
-            justify-self: center;
-        }
-        .header-img{
-            height: 25vh;
-            position: absolute;
-            top:20%;
-            left:10%;
-            border: 5px solid white;
+        .header-img {
+            grid-area: 3 / 2 / 6 / 3;
+            max-height: 300px;
         }
     }
-    .skills { 
-        grid-area: 2 / 1 / 3 / 3; 
+    .skills {
+        grid-area: 2 / 1 / 3 / 3;
     }
-    .project1 { 
-        grid-area: 3 / 1 / 4 / 2; 
+    .project1 {
+        grid-area: 3/1/4/2;
+    }
+    .project2 {
+        grid-area: 3/2/4/3;
+    }
+    .project3 {
+        grid-area: 4/1/5/2;
+    }
+    .project4 {
+        grid-area: 4/2/5/3;
+    }
+    .project1, .project2, .project3, .project4{
         display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 0.5fr 2fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        place-items: center;
-    }
-    .project2 { 
-        grid-area: 3 / 2 / 4 / 3;
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 0.5fr 2fr 1fr;
+        grid-template-columns: 0.3fr 1fr 0.3fr;
+        grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         place-items: center;
     }
-    .project3 { 
-        grid-area: 4 / 1 / 5 / 2; 
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 0.5fr 2fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        place-items: center;
-    }
-    .project4 { 
-        grid-area: 4 / 2 / 5 / 3; 
-        display: grid;
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-template-rows: 0.5fr 2fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        place-items: center;
-    }
-    .project-header { 
-        grid-area: 1 / 2 / 2 / 3; 
-    }
-    .project-img { 
-        grid-area: 2 / 2 / 3 / 3; 
+    .project-header {
+        grid-area: 1/2/2/3;
         width: 100%;
     }
-    .overlay{
-        grid-area: 2 / 2 / 3 / 3; 
+    .project-img {
+        grid-area:2/2/3/3;
         width: 100%;
-        height: 100%;
-        background-color: #d2ab98;
-        opacity: 0;
     }
-    .overlay:hover{
-        opacity: 1;
+    .project-text{
+        grid-area: 3/2/4/3;
+        background-color: #ecdfd6;
     }
-    .project-img-p4{
-            grid-area: 2 / 2 / 3 / 3;
-            width: 100%;
-            height: 110%;
-            align-self: start;
-            background-image: url("project4.PNG");
-            animation: walk 20s infinite;
-            box-shadow:5px 5px 10px 1px rgba(0,0,0,0.5);
-    }
-    @keyframes walk{
-        0% {background-position: 0px 718px;}
-        100%{background-position: 0px 0px;}
-    }
-    .project-text { 
-        grid-area: 3 / 2 / 4 / 3; 
+    .project-link{
+        grid-area: 4/2/5/3;
+        background-color: #ecdfd6;
+        justify-self: left;
+        margin-bottom: 2rem;
     }
 }
 
-#content{
-    .header{
+//STYLING
+body{
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    header{
         background-image: url("bg.jpg");
         background-attachment: fixed;
         background-position: center center;
         background-size: cover;
-        position: relative;
-        height: 100vh;
+        position: relative
+        height 100vh;
         z-index: 1;
         .header-name{
+            font-family: 'Euphoria Script', cursive;
             position: relative;
             font-weight: 600;
             font-size: 6rem;
-      
             background: linear-gradient(to right, #d3aca4 0, white 10%, #9f7545 20%);
             background-position: 0;
             -webkit-background-clip: text;
@@ -148,85 +113,106 @@
             animation: name 15s infinite linear;
             animation-fill-mode: forwards;
         }
-        .header-contact { 
+        @keyframes name {
+            0%
+            {background-position: 0;}
+            50%
+            {background-position: 35vw;}
+            100%
+            {background-position: 70vw;}
+        }
+        #header-name-name{
+            color: #9f7545;
+            text-transform: uppercase;
+        }
+        nav{
             ul{
                 list-style-type: none;
-                text-align: center;
+                display: flex;
+            }
+            .header-contact{
+                gap: 40px;
                 li{
-                    a{ 
-                        i{
-                            color:#9f7545;
+                    a{
+                        text-decoration: none;
+                        color:#9f7545;
+                        &:hover{
+                            color:#46331d;
                         }
                     }
                 }
             }
+            #header-lang{
+                gap:8px;
+                button{
+                    padding: 5px 10px 5px 10px;
+                    background-color: #9f7545;
+                    border:none;
+                    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+                    cursor: pointer;
+                    &:hover{
+                        background-color:#46331d;
+                    }
+                }
+            }
         }
-        .header-lang { 
-            
+        #header-about{
+            color: #9f7545;
         }
-        .header-about { 
-            color:$brown;
+        #header-abouttext{
+            margin-top: -5%;
         }
-        .header-abouttext { 
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-        @keyframes name{
-            0%
-              {background-position: 0;}
-            50%
-              {background-position: 50vw;}
-            100%
-              {background-position: 100vw;}
-          }
     }
     .skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+        padding-bottom: 30px;
         background-color: #ecdfd6;
-        .skills-container {
-            margin-left: 10%;
+        p{
+            font-weight: 600;
+        }
+        .skills-container{
             width: 80%;
             background: #e8bfaf;
             border-radius: 10px;
-          }
-      
-          .skill {
+        }
+        .skill{
             text-align: right;
             padding-top: 10px;
             padding-bottom: 10px;
             color: white;
             border-radius: 10px;
-          }
-      
-          .html {
+        }
+        .html{
             background-color: #9f7545;
-            width: 100%;
+            width: 90%;
             animation: bar1 10s ease-in;
-            
-            @keyframes bar1 {
-              from {width: 0;}
-              to {width: 100%;}
-            }
-          }
-          .java {
+        }
+        @keyframes bar1 {
+            from {width: 0;}
+            to {width: 90%;}
+        }
+        .java{
             background-color: #9f7545;
-            width: 10%;
+            width: 40%;
             animation: bar2 10s ease-in;
-      
-            @keyframes bar2 {
-              from {width: 0;}
-              to {width: 10%;}
-            }
-          }
-          .git {
+        }
+        @keyframes bar2 {
+            from {width: 0;}
+            to {width: 40%;}
+        }
+        .git{
             background-color: #9f7545;
             width: 60%;
             animation: bar3 10s ease-in;
-      
-            @keyframes bar3 {
-              from {width: 0;}
-              to {width: 60%;}
-            }
-          }
+        }
+        @keyframes bar3 {
+            from {width: 0;}
+            to {width: 60%;} 
+        }
     }
     .project1, .project2, .project3, .project4{
         background-image: url("bg.jpg");
@@ -236,7 +222,14 @@
         position: relative;
         z-index: 1;
     }
+    .project-header{
+        margin-top: 30px;
+        text-align: center;
+    }
     .project-img{
-        box-shadow:5px 5px 10px 1px rgba(0,0,0,0.5);
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+    }
+    .project-text, .project-link{
+        font-size: 0.9rem;
     }
 }

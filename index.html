@@ -2,30 +2,130 @@
 <html lang="sv">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1653ff7c23.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
-
-    <meta name="theme-color" content="#fafafa">
-    <script src="https://kit.fontawesome.com/1f662be9a6.js" crossorigin="anonymous"></script>
-    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:wght@300;500;600&display=swap"
+        rel="stylesheet">
+    <title>CV</title>
 </head>
 
 <body>
-    <div id="content">
-    </div>
+    <main class="content">
+        <header class="header">
+            <nav>
+                <ul id="header-lang">
+                </ul>
+                <ul class="header-contact">
+                    <li>
+                        <a class="fas fa-phone fa-2x" href="tel:0707693442"></a>
+                    </li>
+                    <li>
+                        <a class="fas fa-envelope fa-2x" href="mailto:rebecka.larsson@medieinstitutet.se"></a>
+                    </li>
+                    <li>
+                        <a class="fab fa-linkedin fa-2x"
+                            href="https://www.linkedin.com/in/rebecka-larsson-68434b222/"></a>
+                    </li>
+                    <li>
+                        <a class="fab fa-github fa-2x"
+                        href="https://github.com/Reebeecka"></a>
+                    </li>
+                </ul>
+            </nav>
+            <img class="header-img" src="me.PNG">
+            <h1 class="header-name">Rebecka Larsson</h1>
+            <h2 id="header-name-name">FrontEnd Utvecklare</h2>
+            <h3 id="header-about">Kort om mig</h3>
+            <p id="header-abouttext">Hej! Jag söker en Lia-plats hos er! Jag är en trevlig tjej på 24 år som älskar
+                front-end utveckling. Mitt favorit
+                språk tror jag är CSS även om JavaScript kommer på en nära andra plats. Jag bor i Västerås tillsammans
+                med min sambo och hund. Jag gillar att resa
+                mycket tillsammans med familjen och är aktiv inom rugbyn i Sverige genom att sitta i styrelse, vara
+                manager och dommare. Jag har alltid hållit på
+                med lagsport vilket har hjälpt mig i mitt sammarbete med andra.
+                Jag är en väldigt social tjej som gärna både arbetar och umgås med andra även om det är väldigt skönt
+                att sitta och skriva kod i sin ensamhet ibland.
+                Jag har alltid fått beröm för att vara snabb i mitt arbete samt snabb på att lära mig även om det ibland
+                kan gå lite väl snabbt.
+                På mitt senaste arbete jobbade jag administrativt med tekniska strul, löner och ekonomiska rapporter,
+                detta har förstärkt min förmåga i problemlösning
+                med även gjort att jag har blivit duktig på excel.
+                Nedan ser du mina kompetenser och hur duktig jag är på dessa enligt mig själv samt några av mina projekt
+                från skolan.
+                Jag hoppas att vi ses i Oktober under min första Lia-period! Tack!
+            </p>
+        </header>
+        <section class="skills">
+            <p>HTML</p>
+            <div class="skills-container">
+                <div class="skill html"></div>
+            </div>
+            <p>CSS</p>
+            <div class="skills-container">
+                <div class="skill html"></div>
+            </div>
+            <p>JavaScript</p>
+            <div class="skills-container">
+                <div class="skill java"></div>
+            </div>
+            <p>GIT</p>
+            <div class="skills-container">
+                <div class="skill git"></div>
+            </div>
+        </section>
+        <article class="project1">
+            <h2 class="project-header" id="project1-header">Mot månen</h2>
+            <img class="project-img" onmouseover="hoverImg(this)" onmouseout="normalImg(this)" src="project1.PNG">
+            <p class=project-text id="project1-text">
+                Ovan är ett projekt från skolan där grunden var att lära sig positionering i CSS. Samt jobba utifrån en
+                kravspecifikation från kund. Håll muspekaren över bilden för att se sida två av webbplatsen
+            </p>
+            <a class="project-link" id="project-link1" href="https://github.com/Reebeecka/Space-ventures"> Tryck här för
+                att komma till GitHub Repot</a>
+        </article>
+        <article class="project2">
+            <h2 class="project-header" id="project2-header">Mitt första CV</h2>
+            <img class="project-img" src="project2.PNG">
+            <p class=project-text id="project2-text">
+                Ovan är ett egen-designat project som vi arbetade med i skolan. Jag var inte nöjd och skapade därför
+                sidan du är på just nu (haha).
+            </p>
+            <a class="project-link" id="project-link2" href="https://github.com/Reebeecka/Rebecka-CV"> Tryck här för att
+                komma till GitHub
+                Repot</a>
+        </article>
+        <article class="project3">
+            <h2 class="project-header" id="project3-header">Städer och Länder</h2>
+            <img class="project-img" src="project3.PNG">
+            <p class=project-text id="project3-text">
+                Ovan är ett JavaScript project som jag tillsammans med en grupp i skolan skapat. Projektet är uppbygt på
+                API:er där du får fram population, väder, vanlig fakta samt den senaste nyheten från ett land samt de
+                tillhörande städerna till landet.
+            </p>
+            <a class="project-link" id="project-link3" href="https://github.com/Reebeecka/Stader-Lander"> Tryck här för
+                att komma till
+                GitHub Repot</a>
+        </article>
+        <article class="project4">
+            <h2 class="project-header" id="project4-header">Spel Corona</h2>
+            <img class="project-img" src="project4.PNG">
+            <p class=project-text id="project4-text">
+                Ovan är även det ett grupparbete där vi fick i uppgift att skapa ett spel för att lära oss om kollision
+                och tangenttryckningar. Vi har i spelet två karaktärer som ska jaga varandra och samla poäng.
+            </p>
+            <a class="project-link" id="project-link4" href="https://github.com/Reebeecka/CoronaGame"> Tryck här för att
+                komma till GitHub Repot</a>
+        </article>
+    </main>
 </body>
 
 </html>

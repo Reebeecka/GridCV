@@ -1,192 +1,79 @@
-let content = document.getElementById("content");
 
-let header = document.createElement("header");
-header.className="header";
+let ulE = document.getElementById("header-lang");
 
-let headerName = document.createElement("h1");
-headerName.className="header-name";
-headerName.innerText="Rebecka Larsson"
+let liEng = document.createElement("li");
+let eng = document.createElement("button");
+eng.innerHTML="Eng";
+eng.addEventListener("click", english);
 
-let headerNameName = document.createElement("h2");
-headerNameName.className="header-name-name";
-headerNameName.innerText="Front End Utvecklare"
+liEng.append(eng);
 
-let headerContact = document.createElement("nav");
-headerContact.className="header-contact";
-    /*let ul = document.createElement("ul");
-        let li1 = document.createElement("li");
-            let a1 = document.createElement("a");
-            a1.href="tel:0707693442";
-                let i1 = document.createElement("i");
-                il.className="fas fa-phone fa-2x";
-        let li2 = document.createElement("li");
-            let a2 = document.createElement("a");
-            a2.href="mailto:rebecka.larsson@medieinstitutet.se";
-                let i2 = document.createElement("i");
-                i2.className="fas fa-envelope fa-2x"
-        let li3 = document.createElement("li");
-            let a3 = document.createElement("a");
-            a3.href="https://www.linkedin.com/in/rebecka-larsson-68434b222/";
-                let i3 = document.createElement("i");
-                i3.className="fab fa-linkedin fa-2x";
+let liSve = document.createElement("li");
+let sve = document.createElement("button");
+sve.innerHTML="Sve";
+sve.addEventListener("click", svenska)
 
-a1.append(i1);
-a2.append(i2);
-a3.append(i3);
+liSve.append(sve);
 
-li1.append(a1);
-li2.append(a2);
-li3.append(a3);
+ulE.append(eng);
+ulE.append(sve);
 
-ul.append(li1, li2, li3);
-headerContact.append(ul);*/
+let headerNameName = document.getElementById("header-name-name");
+let headerAbout = document.getElementById("header-about");
+let headerAboutText = document.getElementById("header-abouttext");
+let project1Header = document.getElementById("project1-header");
+let project1Text = document.getElementById("project1-text");
+let project2Header = document.getElementById("project2-header");
+let project2Text = document.getElementById("project2-text");
+let project3Header = document.getElementById("project3-header");
+let project3Text = document.getElementById("project3-text");
+let project4Header = document.getElementById("project4-header");
+let project4Text = document.getElementById("project4-text");
+let projectLink1 = document.getElementById("project-link1");
+let projectLink2 = document.getElementById("project-link2");
+let projectLink3 = document.getElementById("project-link3");
+let projectLink4 = document.getElementById("project-link4");
 
-let ul = document.createElement("ul");
-ul.className ="header-lang"
-
-let li1 = document.createElement("li");
-let headerLang = document.createElement("button");
-headerLang.innerText="English";
-headerLang.addEventListener("click", eng);
-
-let li2 = document.createElement("li");
-let headerLang1 = document.createElement("button");
-headerLang1.innerText="Svenska";
-headerLang1.addEventListener("click",swe);
-
-li1.append(headerLang);
-li2.append(headerLang1);
-ul.append(li1, li2);
-
-let headerAbout = document.createElement("h2");
-headerAbout.className="header-about";
-headerAbout.innerText="Kort om mig";
-
-let headerAboutText = document.createElement("p");
-headerAboutText.className="header-abouttext";
-headerAboutText.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
-let headerImg = document.createElement("img");
-headerImg.className="header-img";
-headerImg.src="./me.PNG";
-
-
-
-header.append(headerName, headerNameName, headerContact, ul, headerAbout, headerAboutText, headerImg);
-
-
-let skills =document.createElement("section");
-skills.className="skills";
-
-p1 = document.createElement("p");
-p1.innerText="HTML"
-let skillsContainer1 = document.createElement("div");
-skillsContainer1.className="skills-container";
-    let SkillHTML = document.createElement("div");
-    SkillHTML.className = "skill html";
-skillsContainer1.append(SkillHTML);
-
-p2 = document.createElement("p");
-p2.innerText="CSS"
-let skillsContainer2 = document.createElement("div");
-skillsContainer2.className="skills-container";
-    let SkillCSS = document.createElement("div");
-    SkillCSS.className = "skill html";
-skillsContainer2.append(SkillCSS);
-
-p3 = document.createElement("p");
-p3.innerText="JavaScript"
-let skillsContainer3 = document.createElement("div");
-skillsContainer3.className="skills-container";
-    let SkillJava = document.createElement("div");
-    SkillJava.className = "skill java";
-skillsContainer3.append(SkillJava);
-
-p4 = document.createElement("p");
-p4.innerText="GIT"
-let skillsContainer4 = document.createElement("div");
-skillsContainer4.className="skills-container";
-    let Skillgit = document.createElement("div");
-    Skillgit.className = "skill git";
-skillsContainer4.append(Skillgit);
-
-skills.append(p1, skillsContainer1, p2, skillsContainer2, p3, skillsContainer3, p4, skillsContainer4);
-
-let project1 = document.createElement("article");
-project1.className="project1";
-    let ProjectHeader1 = document.createElement("h2");
-    ProjectHeader1.className="project-header";
-    ProjectHeader1.innerText="Till månen";
-    let ProjectImg1 = document.createElement("img");
-    ProjectImg1.className="project-img";
-    ProjectImg1.src="project1.PNG";
-    let Overlay1 =document.createElement("div");
-    Overlay1.className="overlay";
-    let overlaytext1 = document.createElement("p");
-    overlaytext1.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    Overlay1.append(overlaytext1);
-project1.append(ProjectHeader1, ProjectImg1, Overlay1);
-
-let project2 = document.createElement("article");
-project2.className="project2";
-    let ProjectHeader2 = document.createElement("h2");
-    ProjectHeader2.className="project-header";
-    ProjectHeader2.innerText="Rebecka CV";
-    let ProjectImg2 = document.createElement("img");
-    ProjectImg2.className="project-img";
-    ProjectImg2.src="project2.PNG";
-    let Overlay2 =document.createElement("div");
-    Overlay2.className="overlay";
-    let overlaytext2 = document.createElement("p");
-    overlaytext2.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    Overlay2.append(overlaytext2);
-project2.append(ProjectHeader2, ProjectImg2, Overlay2);
-
-
-let project3 = document.createElement("article");
-project3.className="project3";
-    let ProjectHeader3 = document.createElement("h2");
-    ProjectHeader3.className="project-header";
-    ProjectHeader3.innerText="Utforska Rymden";
-    let ProjectImg3 = document.createElement("img");
-    ProjectImg3.className="project-img";
-    ProjectImg3.src="project3.PNG";
-    let Overlay3 =document.createElement("div");
-    Overlay3.className="overlay";
-    let overlaytext3 = document.createElement("p");
-    overlaytext3.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    Overlay3.append(overlaytext3);
-project3.append(ProjectHeader3, ProjectImg3, Overlay3);
-
-let project4 = document.createElement("article");
-project4.className="project4";
-    let ProjectHeader4 = document.createElement("h2");
-    ProjectHeader4.className="project-header";
-    ProjectHeader4.innerText="Parallax hemsida";
-    let ProjectImg4 = document.createElement("div");
-    ProjectImg4.className="project-img-p4";
-    let ProjectText4 = document.createElement("p");
-    ProjectText4.className="project-text";
-
-project4.append(ProjectHeader4, ProjectImg4, ProjectText4);
-
-content.append(header, skills, project1, project2, project3, project4);
-
-function eng(){
-    headerAbout.innerText="About me";
-    headerNameName.innerText="Front End Developer"
-    ProjectHeader1.innerText="To the Moon";
-    ProjectHeader2.innerText="Rebecka Resume";
-    ProjectHeader3.innerText="Space Ventures";
-    ProjectHeader4.innerText="Parallax Website";
+function english(){
+    headerNameName.innerHTML="FrontEnd Developer";
+    headerAbout.innerHTML="About me";
+    headerAboutText.innerHTML="Hello! Im looking for a Lia-spot at yours! I´m a nice girl, 24 years old who loves front-end development. My favourite language is probably CSS even though JavaScript is a very close second. I live in Västerås with my partner and dog. I love to travel togheter with my family and I´m also very active in Swedish rugby as beeing on the board, managing a team and refereing. I´ve always done team sports and that have helped me in my collaboration with others. I´m a very social girl that likes to both work and hang out with others even if its sometimes very nice to sit done and write some code alone sometimes. I´ve always been praised for beeing a fast worker and learner even though I might sometimes be a bit too fast. In my latest workplace I worked in administration with solving technichal issues, salaries and economic reports, this has enhanced my ability to problemsolve but it also helped me become really good at excel. If you scroll down you see some of my skills and how good I feel that I am at those skills, you also see some of my projects from School. I hope to see you in October during my first Lia-period! Thank you!";
+    project1Header.innerHTML="To the moon";
+    project1Text.innerHTML="Above is a project from school with the purpose of learning positioning in CSS and also work from a clientspecification. Hover over the image to see page 2 of the website";
+    project2Header.innerHTML="My first resumé";
+    project2Text.innerHTML="Above is a self-designed project that we worked on in school. I was not happy, hence why i created the page you are currently on (haha)";
+    project3Header.innerHTML="Cities and Countries";
+    project3Text.innerHTML="Above is a JavaScript project that I created togheter with a group in school. The project is based on several API:s that shows you the population, wheater, comon facts and the most recent news from a country and its cities.";
+    project4Header.innerHTML="Game Covid";
+    project4Text.innerHTML="Above is also a groupproject where we had the assignment to create a game to learn about colision and keystrokes. In the game we have created to characters that are supose to chase eachother and score points";
+    projectLink1.innerHTML="Press here to get to the GitHub Repo";
+    projectLink2.innerHTML="Press here to get to the GitHub Repo";
+    projectLink3.innerHTML="Press here to get to the GitHub Repo";
+    projectLink4.innerHTML="Press here to get to the GitHub Repo";
 }
 
+function svenska(){
+    headerNameName.innerHTML="FrontEnd Utvecklare";
+    headerAbout.innerHTML="Kort om mig";
+    headerAboutText.innerHTML="Hej! Jag söker en Lia-plats hos er! Jag är en trevlig tjej på 24 år som älskar front-end utveckling. Mitt favorit språk tror jag är CSS även om JavaScript kommer på en nära andra plats. Jag bor i Västerås tillsammans med min sambo och hund. Jag gillar att resa mycket tillsammans med familjen och är aktiv inom rugbyn i Sverige genom att sitta i styrelse, vara manager och dommare. Jag har alltid hållit på med lagsport vilket har hjälpt mig i mitt sammarbete med andra. Jag är en väldigt social tjej som gärna både arbetar och umgås med andra även om det är väldigt skönt att sitta och skriva kod i sin ensamhet ibland. Jag har alltid fått beröm för att vara snabb i mitt arbete samt snabb på att lära mig även om det ibland kan gå lite väl snabbt. På mitt senaste arbete jobbade jag administrativt med tekniska strul, löner och ekonomiska rapporter, detta har förstärkt min förmåga i problemlösning med även gjort att jag har blivit duktig på excel. Nedan ser du mina kompetenser och hur duktig jag är på dessa enligt mig själv samt några av mina projekt från skolan. Jag hoppas att vi ses i Oktober under min första Lia-period! Tack!";
+    project1Header.innerHTML="Mot månen";
+    project1Text.innerHTML="Ovan är ett projekt från skolan där grunden var att lära sig positionering i CSS. Samt jobba utifrån en kravspecifikation från kund. Håll muspekaren över bilden för att se sida två av webbplatsen";
+    project2Header.innerHTML="Mitt första CV";
+    project2Text.innerHTML="Ovan är ett egen-designat project som vi arbetade med i skolan. Jag var inte nöjd och skapade därför sidan du är på just nu (haha).";
+    project3Header.innerHTML="Städer och Länder";
+    project3Text.innerHTML="Ovan är ett JavaScript project som jag tillsammans med en grupp i skolan skapat. Projektet är uppbygt på API:er där du får fram population, väder, vanlig fakta samt den senaste nyheten från ett land samt de tillhörande städerna till landet.";
+    project4Header.innerHTML="Spel Corona";
+    project4Text.innerHTML="Ovan är även det ett grupparbete där vi fick i uppgift att skapa ett spel för att lära oss om kollision och tangenttryckningar. Vi har i spelet två karaktärer som ska jaga varandra och samla poäng.";
+    projectLink1.innerHTML="Tryck här för att komma till GitHub Repot";
+    projectLink2.innerHTML="Tryck här för att komma till GitHub Repot";
+    projectLink3.innerHTML="Tryck här för att komma till GitHub Repot";
+    projectLink4.innerHTML="Tryck här för att komma till GitHub Repot";
+}
 
-function swe(){
-    headerAbout.innerText="Kort om mig";
-    headerNameName.innerText="Front End Utvecklare"
-    ProjectHeader1.innerText="Till månen";
-    ProjectHeader2.innerText="Rebecka CV";
-    ProjectHeader3.innerText="Utforska Rymden";
-    ProjectHeader4.innerText="Parallax hemsida";
+function hoverImg(img){
+    img.src = "project1hover.PNG";
+}
+
+function normalImg(img){
+    img.src= "project1.PNG"
 }
