@@ -68,7 +68,7 @@ headerAboutText.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 let headerImg = document.createElement("img");
 headerImg.className="header-img";
-headerImg.src="me.PNG";
+headerImg.src="./me.PNG";
 
 
 
