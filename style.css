@@ -6,12 +6,12 @@
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   -ms-grid-rows: 100vh 50vh 50vh 50vh;
-  grid-template-rows: 100vh 50vh 50vh 50vh;
+      grid-template-rows: 100vh 50vh 50vh 50vh;
 }
 
 main header {
@@ -22,15 +22,15 @@ main header {
   grid-area: 1 / 1 / 2 / 3;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [6];
-  grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (1fr) [7];
-  grid-template-rows: repeat(7, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[7];
+      grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main header nav {
@@ -41,8 +41,8 @@ main header nav {
   grid-area: 1 / 2 / 2 / 6;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [6];
-  grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
 }
 
 main header nav #header-lang {
@@ -56,6 +56,15 @@ main header nav .header-contact {
 }
 
 main header .header-name {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-area: 2 / 3 / 3 / 7;
+  margin-left: 2rem;
+}
+
+main header #header-name-name {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 3;
@@ -64,37 +73,29 @@ main header .header-name {
   margin-left: 2rem;
 }
 
-main header #header-name-name {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 4;
-  grid-area: 4 / 3 / 4 / 7;
-  margin-left: 2rem;
-}
-
 main header #header-about {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
-  grid-area: 5 / 3 / 6 / 5;
+  grid-area: 4 / 3 / 5 / 5;
   margin-left: 2rem;
 }
 
 main header #header-abouttext {
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
-  grid-area: 6 / 2 / 8 / 6;
+  grid-area: 5 / 2 / 7 / 6;
 }
 
 main header .header-img {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-area: 3 / 2 / 6 / 3;
+  grid-area: 2 / 2 / 5 / 3;
   max-height: 300px;
 }
 
@@ -138,16 +139,13 @@ main .project4 {
   grid-area: 4/2/5/3;
 }
 
-main .project1,
-main .project2,
-main .project3,
-main .project4 {
+main .project1, main .project2, main .project3, main .project4 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.3fr 1fr 0.3fr;
-  grid-template-columns: 0.3fr 1fr 0.3fr;
+      grid-template-columns: 0.3fr 1fr 0.3fr;
   -ms-grid-rows: 0.5fr 2fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+      grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   place-items: center;
@@ -188,12 +186,12 @@ main .project-link {
   grid-area: 4/2/5/3;
   background-color: #ecdfd6;
   -ms-grid-column-align: left;
-  justify-self: left;
+      justify-self: left;
   margin-bottom: 2rem;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main header {
@@ -201,32 +199,25 @@ main header {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  position: relative height 100vh;
+  position: relative height 100vh;
   z-index: 1;
 }
 
 main header .header-name {
-  font-family: "Euphoria Script", cursive;
+  font-family: 'Euphoria Script', cursive;
   position: relative;
   font-weight: 600;
   font-size: 6rem;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(0, #d3aca4),
-    color-stop(10%, white),
-    color-stop(20%, #9f7545)
-  );
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #d3aca4), color-stop(10%, white), color-stop(20%, #9f7545));
   background: linear-gradient(to right, #d3aca4 0, white 10%, #9f7545 20%);
   background-position: 0;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: name 15s infinite linear;
-  animation: name 15s infinite linear;
+          animation: name 15s infinite linear;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes name {
@@ -287,7 +278,7 @@ main header nav #header-lang button {
   background-color: #9f7545;
   border: none;
   -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
@@ -300,7 +291,7 @@ main header #header-about {
 }
 
 main header #header-abouttext {
-  margin-top: -5%;
+  font-size: 0.9rem;
 }
 
 main .skills {
@@ -309,16 +300,20 @@ main .skills {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
   padding-bottom: 30px;
   background-color: #ecdfd6;
+}
+
+main .skills p {
+  font-weight: 600;
 }
 
 main .skills .skills-container {
@@ -339,7 +334,7 @@ main .skills .html {
   background-color: #9f7545;
   width: 90%;
   -webkit-animation: bar1 10s ease-in;
-  animation: bar1 10s ease-in;
+          animation: bar1 10s ease-in;
 }
 
 @-webkit-keyframes bar1 {
@@ -364,7 +359,7 @@ main .skills .java {
   background-color: #9f7545;
   width: 40%;
   -webkit-animation: bar2 10s ease-in;
-  animation: bar2 10s ease-in;
+          animation: bar2 10s ease-in;
 }
 
 @-webkit-keyframes bar2 {
@@ -389,7 +384,7 @@ main .skills .git {
   background-color: #9f7545;
   width: 60%;
   -webkit-animation: bar3 10s ease-in;
-  animation: bar3 10s ease-in;
+          animation: bar3 10s ease-in;
 }
 
 @-webkit-keyframes bar3 {
@@ -410,10 +405,7 @@ main .skills .git {
   }
 }
 
-main .project1,
-main .project2,
-main .project3,
-main .project4 {
+main .project1, main .project2, main .project3, main .project4 {
   background-image: url("bg.jpg");
   background-attachment: fixed;
   background-position: center center;
@@ -429,11 +421,10 @@ main .project-header {
 
 main .project-img {
   -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
-main .project-text,
-main .project-link {
+main .project-text, main .project-link {
   font-size: 0.9rem;
 }
 /*# sourceMappingURL=style.css.map */

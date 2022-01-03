@@ -71,7 +71,7 @@ function svenska(){
 }
 
 function hoverImg(img){
-    img.src = "project1hover.PNG";
+    img.src = "/project1hover.PNG";
 }
 
 function normalImg(img){
