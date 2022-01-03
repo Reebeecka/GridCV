@@ -68,7 +68,7 @@ headerAboutText.innerText="Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 let headerImg = document.createElement("img");
 headerImg.className="header-img";
-headerImg.src="./img/me.png";
+headerImg.src="./img/me.PNG";
 
 
 
@@ -119,7 +119,7 @@ project1.className="project1";
     ProjectHeader1.innerText="Till månen";
     let ProjectImg1 = document.createElement("img");
     ProjectImg1.className="project-img";
-    ProjectImg1.src="./img/project1.png";
+    ProjectImg1.src="./img/project1.PNG";
     let Overlay1 =document.createElement("div");
     Overlay1.className="overlay";
     let overlaytext1 = document.createElement("p");
@@ -134,7 +134,7 @@ project2.className="project2";
     ProjectHeader2.innerText="Rebecka CV";
     let ProjectImg2 = document.createElement("img");
     ProjectImg2.className="project-img";
-    ProjectImg2.src="./img/project2.png";
+    ProjectImg2.src="./img/project2.PNG";
     let Overlay2 =document.createElement("div");
     Overlay2.className="overlay";
     let overlaytext2 = document.createElement("p");
@@ -150,7 +150,7 @@ project3.className="project3";
     ProjectHeader3.innerText="Utforska Rymden";
     let ProjectImg3 = document.createElement("img");
     ProjectImg3.className="project-img";
-    ProjectImg3.src="./img/project3.png";
+    ProjectImg3.src="../img/project3.PNG";
     let Overlay3 =document.createElement("div");
     Overlay3.className="overlay";
     let overlaytext3 = document.createElement("p");
