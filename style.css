@@ -571,7 +571,7 @@ template {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  background-image: url(../img/project4.PNG);
+  background-image: url(project4.PNG);
   -webkit-animation: walk 20s infinite;
           animation: walk 20s infinite;
   -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
@@ -605,7 +605,7 @@ template {
 }
 
 #content .header {
-  background-image: url("../img/bg.jpg");
+  background-image: url("bg.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -767,7 +767,7 @@ template {
 }
 
 #content .project1, #content .project2, #content .project3, #content .project4 {
-  background-image: url("../img/bg.jpg");
+  background-image: url("bg.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
