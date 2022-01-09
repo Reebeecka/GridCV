@@ -1,0 +1,69 @@
+//Grid-placement
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: 100vh 50vh 50vh 50vh;
+    header {
+        grid-area: 1 / 1 / 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        align-items: center;
+        nav{
+            grid-area: 1 / 2 / 2 / 6;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            #header-lang{
+                grid-column: 1;
+            }
+            .header-contact{
+                grid-column: 6;
+            }
+        }
+        .header-name {
+            grid-area: 2 / 3 / 3 / 7;
+            margin-left: 2rem;
+        }
+        #header-name-name {
+            grid-area: 3 / 3 / 4 / 7;
+            margin-left: 2rem;
+        }
+        #header-about {
+            grid-area: 4 / 3 / 5 / 5;
+            margin-left: 2rem;
+            align-self: flex-start;
+        }
+        #header-abouttext {
+            grid-area: 5 / 2 / 7 / 6;
+        }
+        .header-img {
+            grid-area: 2 / 2 / 5 / 3;
+            max-height: 300px;
+            display: block;
+        }
+    }
+    .skills {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    .project1 {
+        grid-area: 3/1/4/2;
+    }
+    .project2 {
+        grid-area: 3/2/4/3;
+    }
+    .project3 {
+        grid-area: 4/1/5/2;
+    }
+    .project4 {
+        grid-area: 4/2/5/3;
+    }
+}
+
+//Style-changes
+.header-name{
+    font-size: 6rem;
+}
